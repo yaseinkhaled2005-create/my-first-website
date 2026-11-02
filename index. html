@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WWW Introduction</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+        }
+        h1 {
+            color: #8b4513;
+        }
+        p {
+            color: rgb(150, 20, 20);
+        }
+        em, strong {
+            color: #8a2be2;
+        }
+        h4, h5, h6 {
+            color: rgba(48, 9, 22, 0.8);
+            background-color: rgb(200, 200, 200);
+        }
+        small {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Introduction to <em>web development</em></h1>
+
+    <h2>Internet and the web</h2>
+    <p>The world wide web, or <b>web</b> for ...</p>
+
+    <h2>Web Development (Front end, Back end)</h2>
+    <h3>Front <strong>End</strong></h3>
+    <p style="background-color: #ffeeff; color: rgb(2, 2, 137);">
+        The part of a website where the user ...
+    </p>
+    <h3>Back <strong>End</strong></h3>
+    <p><b>Backend</b> is the server side of a ...</p>
+
+    <hr />
+    <h4>forth heading</h4>
+    <h5>fifth heading</h5>
+    <h6>sixth <br />heading</h6>
+
+    <!-- Student names and IDs -->
+    <p>
+        <small>Mohammed Mahmoud &copy; B2612022044</small><br>
+        <small>Adel Ahmed &copy; B2612022039</small>
+    </p>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#11100e">
+<meta name="description" content="آخر الذين فهموا الصمت — رواية أدبية من تأليف ياسين خالد (الوزير كلاسڪ).">
+<title>آخر الذين فهموا الصمت | ياسين خالد</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&display=swap');
+:root{--bg:#11100e;--panel:#191714;--gold:#c6a66b;--gold2:#8f7548;--ink:#e9e0d1;--muted:#a69b89;--line:#40382c;--reading:22px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Cairo',sans-serif;line-height:2}
+a{color:inherit;text-decoration:none}
+.progress{position:fixed;top:0;right:0;height:3px;width:0;background:var(--gold);z-index:20}
+header{position:sticky;top:0;z-index:10;background:#11100eeF;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.nav{max-width:1100px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{color:var(--gold);font-weight:700;letter-spacing:.5px}
+.navlinks{display:flex;gap:18px;font-size:13px;color:var(--muted)}
+.navlinks a:hover,.brand:hover{color:#f2d59b}
+.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding:70px 20px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 42%,#47382055 0,transparent 48%),linear-gradient(135deg,#171512,#0c0b0a 65%,#20190f)}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid #a98a4b55;inset:22px;pointer-events:none}
+.hero:after{inset:30px;border-color:#a98a4b22}
+.cover{max-width:760px;position:relative;z-index:1}
+.kicker{color:var(--gold);font-size:13px;letter-spacing:4px}
+h1{font-family:'Amiri',serif;font-size:clamp(42px,8vw,78px);line-height:1.35;color:#f0dfbd;margin:22px 0;text-shadow:0 4px 30px #000}
+.ornament{color:var(--gold);font-size:28px;letter-spacing:10px}
+.subtitle{color:var(--muted);font-family:'Amiri',serif;font-size:20px}
+.author{margin-top:48px;color:var(--gold);font-size:17px}
+.author strong{display:block;color:var(--ink);font-family:'Amiri',serif;font-size:27px}
+.penname{font-size:13px;letter-spacing:2px;color:var(--gold2)}
+.btn{display:inline-block;margin-top:28px;border:1px solid var(--gold2);padding:10px 26px;color:#e8d3a9;border-radius:2px;transition:.2s}
+.btn:hover{background:var(--gold);color:#17130c}
+.wrap{max-width:1000px;margin:auto;padding:55px 22px}
+.section-title{text-align:center;font-family:'Amiri',serif;font-size:34px;color:#e7d3ad;margin:0 0 10px}
+.section-intro{text-align:center;color:var(--muted);font-size:14px;margin:0 auto 32px;max-width:600px}
+.about{background:var(--panel);border:1px solid var(--line);padding:26px 30px;text-align:center;color:#cfc4b2;font-family:'Amiri',serif;font-size:21px}
+.layout{display:grid;grid-template-columns:260px 1fr;gap:30px;align-items:start}
+.toc{position:sticky;top:82px;background:var(--panel);border:1px solid var(--line);padding:20px}
+.toc h3{margin:0 0 12px;color:var(--gold);font-family:'Amiri',serif;font-size:22px}
+.toc a{display:block;padding:7px 3px;border-bottom:1px solid #ffffff0c;color:var(--muted);font-size:13px}
+.toc a:hover{color:var(--gold)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.tools button{background:transparent;border:1px solid var(--line);color:var(--gold);padding:7px 12px;font:inherit;font-size:12px;cursor:pointer}
+.tools button:hover{background:#302719}
+.chapter{background:#171512;border:1px solid var(--line);padding:clamp(22px,5vw,46px);margin-bottom:22px;scroll-margin-top:90px}
+.chapter-no{color:var(--gold2);font-size:12px;letter-spacing:2px}
+.chapter h2{font-family:'Amiri',serif;color:#e8d4ad;font-size:32px;margin:4px 0 20px}
+.chapter p{font-family:'Amiri',serif;font-size:var(--reading);line-height:2.15;color:#ded5c7;margin:0 0 17px}
+.chapter p.dialogue{color:#e8c987}
+.quote{border-right:2px solid var(--gold);padding:8px 18px;margin:25px 0;color:#d8bd8b;font-family:'Amiri',serif;font-size:24px}
+.chapter-end{text-align:left;color:var(--gold2);font-size:12px;margin-top:25px}
+.end{background:linear-gradient(145deg,#211b12,#11100e);border:1px solid var(--gold2);padding:38px;text-align:center}
+.end blockquote{font-family:'Amiri',serif;font-size:25px;color:#e5d0a7;margin:10px auto;max-width:700px}
+footer{text-align:center;padding:35px 15px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+footer strong{color:var(--gold)}
+@media(max-width:760px){.navlinks{display:none}.layout{grid-template-columns:1fr}.toc{position:relative;top:auto}.toc-list{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}.hero{min-height:78vh}.chapter p{font-size:21px}.wrap{padding:38px 15px}}
+@media print{body{background:white;color:black}.progress,header,.tools,.toc,.btn{display:none!important}.hero{min-height:auto;background:white;color:black}.hero h1,.chapter h2,.chapter p,.quote{color:black}.layout{display:block}.chapter{break-inside:avoid;background:white;border:0}.chapter p{font-size:17px;color:black}.about,.end{background:white;color:black}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<header><nav class="nav">
+<a class="brand" href="#home">الوزير كلاسڪ</a>
+<div class="navlinks"><a href="#about">عن الرواية</a><a href="#chapters">الفصول</a><a href="#ending">الخاتمة</a></div>
+</nav></header>
+
+<section class="hero" id="home">
+<div class="cover">
+<div class="kicker">رواية أدبية</div>
+<div class="ornament">✦ ─── ✦</div>
+<h1>آخر الذين<br>فهموا الصمت</h1>
+<div class="subtitle">حكاية عن الحقيقة والذاكرة والندم</div>
+<div class="ornament">❦</div>
+<div class="author">تأليف<strong>ياسين خالد</strong><span class="penname">الوزير كلاسڪ</span></div>
+<a class="btn" href="#chapters">ابدأ القراءة</a>
+</div>
+</section>
+
+<section class="wrap" id="about">
+<h2 class="section-title">عن الرواية</h2>
+<p class="section-intro">ليست كل الأسرار مدفونة، وليست كل الحقائق خلاصًا.</p>
+<div class="about">في مدينة قديمة، يعود ماضٍ ظنّ الجميع أنه انتهى. ثلاثة أصدقاء، رسالة مؤجلة، وساعة لا تتحرك إلا حين تقترب الحقيقة. وبين الصمت والكلام، يحاول كل واحد منهم أن يواجه الشخص الذي كانه ذات يوم.</div>
+</section>
+
+<main class="wrap" id="chapters">
+<h2 class="section-title">صفحات الحكاية</h2>
+<p class="section-intro">اختر فصلًا من الفهرس، أو تابع القراءة بالترتيب.</p>
+<div class="layout">
+<aside class="toc"><h3>فهرس الرواية</h3><div class="toc-list">
+<a href="#ch1">01 — الساعة التي لا تنسى</a><a href="#ch2">02 — رسالة من رجل ميت</a>
+<a href="#ch3">03 — الرجل الثالث</a><a href="#ch4">04 — اعتراف تحت المطر</a>
+<a href="#ch5">05 — الغرفة السابعة</a><a href="#ch6">06 — الذي عاد من الموت</a>
+<a href="#ch7">07 — الحقيقة التي لا تُحتمل</a><a href="#ch8">08 — اللقاء الأخير</a>
+<a href="#ch9">09 — آخر مباراة</a><a href="#ch10">10 — ما تبقى من الصمت</a>
+<a href="#ending">الخاتمة</a>
+</div></aside>
+<div>
+<div class="tools">
+<button onclick="changeFont(-1)">تصغير الخط −</button><button onclick="changeFont(1)">تكبير الخط +</button><button onclick="window.print()">طباعة الرواية / حفظ PDF</button>
+</div>
+
+<article class="chapter" id="ch1"><div class="chapter-no">الفصل الأول · 01</div><h2>الساعة التي لا تنسى</h2>
+<p>في مدينة قديمة، حيث تتكئ البيوت على بعضها كأنها تخشى السقوط، كان هناك منزل لا يزوره أحد. منزل عتيق، تعلو جدرانه طبقات من الغبار، وتحيط بنوافذه أشجار يابسة، وفي مدخله ساعة خشبية ضخمة لا يعرف أحد متى توقفت عن العمل.</p>
+<p>كان يسكنه رجل يُدعى آدم، تجاوز الثلاثين بقليل، وعاش معظم حياته وحيدًا. لم يكن آدم رجلًا حزينًا بالمعنى المعتاد؛ لم يكن يبكي، ولم يكن يشتكي، لكنه كان يمتلك تلك النظرة التي توحي بأنه رأى شيئًا لم يستطع نسيانه.</p>
+<p class="dialogue">كان يقول دائمًا: «الساعات لا تتوقف، نحن الذين نتوقف عن ملاحظة مرورها».</p>
+<p>وفي إحدى الليالي الماطرة، بينما كان يجلس أمام مدفأته، سمع طرقًا على الباب. ثلاث طرقات متباعدة. فتح الباب، فوجد فتاة تقف تحت مظلة سوداء، تحمل كتابًا قديمًا.</p>
+<p class="dialogue">قالت: «هل أنت آدم؟» — «ومن يسأل؟» — «أنا ابنة الرجل الذي ظننتَ أنه مات».</p>
+<p>تغير وجه آدم. لم ينطق بكلمة، لكنه شعر بأن السنوات التي قضاها في محاولة النسيان قد عادت دفعة واحدة. كانت الفتاة تحمل كتابًا عنوانه: «كيف يعيش الإنسان حين يعرف أكثر مما ينبغي؟».</p>
+<p>وقبل أن يسألها عن اسمها، توقفت الساعة القديمة خلفه. لأول مرة منذ سبع سنوات، تحرك عقربها.</p><div class="chapter-end">نهاية الفصل الأول</div></article>
+
+<article class="chapter" id="ch2"><div class="chapter-no">الفصل الثاني · 02</div><h2>رسالة من رجل ميت</h2>
+<p>اسم الفتاة ليان. جلست أمام المدفأة، بينما ظل آدم واقفًا ينظر إليها كأنه يحاول العثور على ملامح رجل آخر في وجهها.</p>
+<p class="dialogue">قالت: «كان أبي يزورك كل خميس، قبل ولادتي». — «هذا مستحيل». — «ولماذا؟» — «لأن أباك مات منذ سبع سنوات». ابتسمت ابتسامة خفيفة: «هذا ما أخبروك به، أليس كذلك؟».</p>
+<p>أخرجت من حقيبتها ظرفًا أصفر قديمًا، ووضعته على الطاولة. كان مكتوبًا عليه بخط يعرفه آدم جيدًا: «إلى آدم... إذا عجزت الذاكرة عن إنقاذك».</p>
+<div class="quote">«يا آدم، إذا وصلت إليك هذه الرسالة، فهذا يعني أنك نجحت في نسيان السؤال، وفشلت في العثور على الإجابة».</div>
+<p>تابعت الرسالة: «لا تبحث عني في الماضي، ولا في الأماكن التي جمعتنا. ابحث عن الحقيقة في الشيء الذي رفضتَ تصديقه منذ البداية. لقد كنا ثلاثة، لكن واحدًا منا لم يكن كما ظنناه».</p>
+<p>ثم قرأ: «لا تثق بمن يملك الإجابات كلها، ولا تخف ممن يملك الأسئلة. وأخيرًا، إن قابلت ابنتي، فلا تخبرها بما حدث في تلك الليلة. ليس لأنها لا تستحق الحقيقة، بل لأنها قد تكون الحقيقة نفسها».</p>
+<p>انتهت الرسالة. رفع آدم عينيه إلى ليان. قالت بصوت منخفض: «أبي لم يختفِ وحده».</p><div class="chapter-end">نهاية الفصل الثاني</div></article>
+
+<article class="chapter" id="ch3"><div class="chapter-no">الفصل الثالث · 03</div><h2>الرجل الثالث</h2>
+<p>في الصباح، خرج آدم وليان إلى مكتبة قديمة في وسط المدينة. كانت المكتبة مغلقة منذ سنوات، لكن آدم احتفظ بمفتاحها. في الداخل، كانت الرفوف مغطاة بالغبار، والكتب مصطفة بعناية غريبة، كأن صاحب المكان غادر منذ لحظات وسيعود قريبًا.</p>
+<p class="dialogue">قالت ليان: «لماذا أحضرتني إلى هنا؟» أجاب: «لأن والدك لم يكن يثق بأحد، إلا بمكان واحد».</p>
+<p>توجه إلى الرف الأخير، وسحب كتابًا ضخمًا عن تاريخ المدن القديمة. خلف الكتاب كان هناك درج صغير. فتحه، فوجد داخله صورة فوتوغرافية قديمة لثلاثة رجال يقفون أمام ساعة المدينة.</p>
+<p>كان آدم أحدهم، والثاني والد ليان، واسمه سامر. أما الثالث، فقد كان رجلًا يرتدي معطفًا أسود، ويقف في الخلف.</p>
+<p class="dialogue">سألت ليان: «من هذا؟» أجاب آدم: «رجل مات قبل أن نعرف أنه كان حيًا».</p>
+<p>كان نادر صديقهما الثالث، وأكثرهم ذكاءً وغموضًا. كان يؤمن بأن الإنسان لا يخاف الحقيقة، بل يخاف الثمن الذي سيدفعه بعد معرفتها. قبل سبع سنوات، اختفى سامر، وبعد اختفائه بأيام أُخبر آدم أن نادر مات في حادث.</p>
+<p>لكن آدم لم يحضر جنازته، ولم يرَ جثمانه، ولم يسأل أحدًا عن التفاصيل. لأنه كان يعرف شيئًا واحدًا: في الليلة التي اختفى فيها سامر، كان نادر معه.</p><div class="chapter-end">نهاية الفصل الثالث</div></article>
+
+<article class="chapter" id="ch4"><div class="chapter-no">الفصل الرابع · 04</div><h2>اعتراف تحت المطر</h2>
+<p>عاد آدم إلى المنزل، وأخذ من خزانته صندوقًا خشبيًا صغيرًا. كان الصندوق يحتوي على أوراق قديمة، وصورة أخرى، ومفتاح نحاسي. في خلف الصورة كُتبت عبارة: «الحقيقة لا تموت، لكنها تتعلم الاختباء».</p>
+<p>قاد المفتاح إلى ذكرى مشروع فكري سري عمل عليه الأصدقاء الثلاثة. لم يكن متعلقًا بالمال أو السياسة أو النفوذ، بل كانوا يحاولون الإجابة عن سؤال واحد: هل يستطيع الإنسان أن يعرف الحقيقة كاملة دون أن يفقد نفسه؟</p>
+<p>كان سامر يؤمن أن الحقيقة تحرر الإنسان، وكان نادر يؤمن أن الحقيقة قد تدمره، أما آدم فكان يرى أن بعض الأبواب لا ينبغي فتحها.</p>
+<p>في إحدى الليالي، اكتشف سامر أن نادر يخفي عنهما شيئًا يتعلق بالمشروع وبشخص قريب منهما. تشاجر الثلاثة، وفي نهاية الليلة غادر سامر المكان ولم يعد.</p>
+<p>بعد أيام، وصلت إلى آدم رسالة تخبره أن نادر مات. ومنذ ذلك الوقت، عاش آدم وكأن شيئًا لم يحدث.</p>
+<div class="quote">«كنت الرجل الذي أغلق الباب».</div>
+<p>قال آدم ذلك أخيرًا، بينما كان المطر يطرق زجاج النافذة. ولم تسأله ليان أي باب يقصد؛ فقد بدا أن الإجابة أكبر من أن تُقال في تلك الليلة.</p><div class="chapter-end">نهاية الفصل الرابع</div></article>
+
+<article class="chapter" id="ch5"><div class="chapter-no">الفصل الخامس · 05</div><h2>الغرفة السابعة</h2>
+<p>قاد المفتاح النحاسي إلى مبنى قديم في أطراف المدينة. كان المبنى مهجورًا، تحيط به أشجار طويلة، وعلى بابه لوحة صدئة كُتب عليها: «مركز الدراسات الإنسانية».</p>
+<p>دخلا من الباب الخلفي. كانت هناك سبع غرف، لكن الغرفة السابعة وحدها كانت مغلقة. فتح آدم الباب بالمفتاح. في الداخل، وجدا طاولة مستديرة، وثلاثة كراسٍ، وسبورة سوداء.</p>
+<div class="quote">«إذا كان الصمت جوابًا، فمن طرح السؤال؟»</div>
+<p>اقتربت ليان من الطاولة، ووجدت دفترًا أسود. فتحته، فوجدت صفحات مليئة بخط والدها. كان سامر يكتب عن شخص يدعى نادر، لكنه لم يكن يتحدث عنه بوصفه صديقًا، بل بوصفه رجلًا اكتشف سرًا خطيرًا.</p>
+<p>وفي الصفحة الأخيرة قرأت: «لم يمت نادر. لقد فهمنا متأخرين أن الرجل الذي كنا نبحث عنه لم يغادر المكان قط. كان بيننا طوال الوقت».</p>
+<p>تراجعت ليان خطوة، ثم التفتت إلى آدم. وقبل أن يسأل أيٌّ منهما، سمعا صوتًا خلفهما: «يعني أن صديقكما الثالث لم يكن بحاجة إلى الاختباء».</p>
+<p>التفت آدم. كان هناك رجل يقف عند الباب. شعره أبيض، ووجهه يحمل آثار السنين. لكنه كان حيًا. كان نادر.</p><div class="chapter-end">نهاية الفصل الخامس</div></article>
+
+<article class="chapter" id="ch6"><div class="chapter-no">الفصل السادس · 06</div><h2>الذي عاد من الموت</h2>
+<p>لم يتحرك آدم. أما ليان، فظلت تنظر إلى الرجل دون أن تفهم.</p>
+<p class="dialogue">قال آدم: «أنت ميت». ابتسم نادر: «هذا ما اتفقنا عليه». — «لماذا؟» — «لأن بعض الحقائق لا يمكن دفنها إلا إذا اعتقد الجميع أن أصحابها ماتوا».</p>
+<p>تقدم نادر وجلس على أحد الكراسي. أشار إلى ليان وقال: «أنت تشبهين أباك». سألته: «أين أبي؟» نظر إليها طويلًا ثم قال: «والدك لم يمت، لكنه اختار ألا يعود».</p>
+<p>أخرج نادر ملفًا ووضعه أمام آدم. كان يحتوي على رسائل بخط آدم، وتوقيعاته، وأوراق تثبت أنه وافق على بعض التجارب الفكرية التي تجاوزت حدودها.</p>
+<p>قال نادر: «لم تكن شريرًا يا آدم. كنت فقط مقتنعًا بأن الذكاء يمنحك الحق في اتخاذ القرارات عن الآخرين».</p>
+<p>تذكر آدم كيف كان يرفض اعتراضات سامر، ويسخر من مخاوفه، ويصف الناس بأنهم لا يفهمون مصلحتهم.</p>
+<p class="dialogue">سأل آدم: «وماذا حدث لسامر؟» أجاب نادر: «اكتشف أن المشروع بدأ يتحول إلى شيء لم نعد نسيطر عليه. فقرر إيقافه، وتحمل المسؤولية وحده». — «وأنت؟» — «حاولت مساعدته». — «وأنا؟» نظر نادر إليه بحزن: «أنت اخترت ألا تصدقه».</p><div class="chapter-end">نهاية الفصل السادس</div></article>
+
+<article class="chapter" id="ch7"><div class="chapter-no">الفصل السابع · 07</div><h2>الحقيقة التي لا تُحتمل</h2>
+<p>جلست ليان على الأرض، وقد بدا عليها أنها لم تعد تحتمل المزيد. قالت: «أريد أن أعرف أين أبي. لا يهمني مشروعكم ولا أفكاركم ولا أخطاؤكم. أريد أبي فقط».</p>
+<p>أطرق نادر رأسه، ثم قال: «هناك مكان كان سامر يذهب إليه كلما أراد أن يبتعد عن العالم». — «أين؟» — «محطة القطار القديمة».</p>
+<p>ذهب الثلاثة في تلك الليلة. كانت المحطة مهجورة، والقطارات لم تمر بها منذ عشرات السنين. في غرفة الانتظار، وجدوا حقيبة جلدية قديمة. داخلها دفتر صغير ورسالة.</p>
+<p>فتحت ليان الرسالة: «ابنتي ليان، إن كنت تقرئين هذه الكلمات، فهذا يعني أن الماضي وصل إليك أخيرًا. أعرف أنك ستكرهينني، وربما سيكون لك الحق في ذلك. لكنني لم أتركك لأنني لم أحبك. تركتك لأنني كنت أعتقد أن بقائي سيجعل حياتك امتدادًا لخطيئتي».</p>
+<p>وتابعت: «كنت أظن أن الإنسان يستطيع أن يختفي من حياة الآخرين دون أن يترك أثرًا. كنت مخطئًا. هناك أشخاص لا يختفي غيابهم أبدًا. أحببتك أكثر مما استطعت قوله، وخفت عليك أكثر مما استطعت الاعتراف به. سامحيني إن استطعتِ. أبوك».</p>
+<p>سقطت الرسالة من يد ليان. قالت وهي تحاول كتم بكائها: «لم أكن أريد رسالة. كنت أريده هو».</p>
+<p>لم يجد آدم ما يقوله. لأن بعض الأحزان لا تحتاج إلى تفسير، بل إلى شخص يجلس بجوارها دون أن يتكلم. وفجأة، سمعوا صوت خطوات في الممر. خرج رجل من الظلام. كان سامر.</p><div class="chapter-end">نهاية الفصل السابع</div></article>
+
+<article class="chapter" id="ch8"><div class="chapter-no">الفصل الثامن · 08</div><h2>اللقاء الأخير</h2>
+<p>وقفت ليان أمامه. لم تركض نحوه، ولم تصرخ، ولم تسأله أين كان. اكتفت بالنظر إليه.</p>
+<p class="dialogue">قال: «ليان...» قاطعته: «لا تقل شيئًا».</p>
+<p>ثم قالت: «كنت أبحث عنك في كل رجل يشبهك، وفي كل رسالة لم تصل، وفي كل باب كنت أظن أنك ستدخل منه».</p>
+<p>انخفض رأسه. قال: «أعرف». أجابت: «لا، أنت لا تعرف. لأنك كنت غائبًا، أما أنا فكنت أعيش غيابك كل يوم».</p>
+<p>لم يدافع عن نفسه، ولم يقدم مبررات. اقترب منها خطوة، لكنها تراجعت.</p>
+<p class="dialogue">قالت: «لا أستطيع أن أسامحك الليلة». أجاب: «لن أطلب منك ذلك».</p>
+<p>كانت تلك أول مرة يرى فيها آدم سامر عاجزًا عن الكلام. اقترب آدم منه وسأله: «لماذا لم تعد؟» نظر سامر إليه وقال: «لأنني كنت أخجل من العودة».</p>
+<p>قال آدم: «وهل كان الخجل أقوى من الصداقة؟» أجاب سامر: «أحيانًا يصبح الإنسان أسيرًا للصورة التي صنعها عن نفسه. كنت أريد أن أعود إليكما رجلًا لم يخطئ، وحين اكتشفت أن ذلك مستحيل، اخترت ألا أعود أبدًا».</p>
+<p>قال آدم: «لقد أضعت سبع سنوات بسبب كبريائك». أجاب سامر: «وأنت أضعت سبع سنوات لأنك رفضت الاعتراف بخطئك».</p>
+<p>لم يجد آدم ردًا. لأن الكلمات كانت صحيحة.</p><div class="chapter-end">نهاية الفصل الثامن</div></article>
+
+<article class="chapter" id="ch9"><div class="chapter-no">الفصل التاسع · 09</div><h2>آخر مباراة</h2>
+<p>بعد أسابيع، عاد سامر إلى المدينة. لم تعد الأمور كما كانت، لكن ليان سمحت له بالبقاء قريبًا منها. أما نادر، فقد اختفى مرة أخرى، تاركًا خلفه رسالة قصيرة: «لقد انتهت مهمتي حين أصبحتم قادرين على مواجهة الحقيقة دوني».</p>
+<p>وفي أحد المساءات، زار آدم منزل سامر. وجده جالسًا أمام رقعة شطرنج قديمة. كانت القطع البيضاء والسوداء موزعة على الرقعة، كأن مباراة طويلة توقفت في منتصفها.</p>
+<p class="dialogue">قال سامر: «هل تتذكر آخر مباراة لعبناها؟» — «نعم». — «من فاز؟» ابتسم آدم: «لا أذكر». ضحك سامر: «لهذا كنت أفضل منك في الشطرنج. كنت تحفظ النتيجة، وأنا كنت أحفظ الأخطاء».</p>
+<p>بدأت المباراة. تحركت القطع ببطء. وبعد عدة نقلات، وضع سامر الملك الأبيض في زاوية الرقعة.</p>
+<p class="dialogue">قال آدم: «كش مات». أجاب سامر: «ليس بعد».</p>
+<p>نظر إليه آدم، ثم اكتشف أن هناك نقلة واحدة لم ينتبه إليها. حرك الحصان، وانفتح الطريق أمام الملك.</p>
+<p>ابتسم سامر: «كنت دائمًا ترى القطع التي أمامك، ولا ترى الاحتمالات التي خلفها». أجابه آدم: «وربما كانت تلك مشكلتي في الحياة أيضًا».</p>
+<p>انتهت المباراة بالتعادل. وللمرة الأولى منذ سنوات، لم يشعر أي منهما بالحاجة إلى معرفة من انتصر.</p><div class="chapter-end">نهاية الفصل التاسع</div></article>
+
+<article class="chapter" id="ch10"><div class="chapter-no">الفصل العاشر · 10</div><h2>ما تبقى من الصمت</h2>
+<p>مرت سنة كاملة. تغير المنزل القديم. أصلح آدم ساعته، وفتح المكتبة أمام الناس، وأصبح يستقبل الزوار كل مساء. كانت ليان تزوره أحيانًا، تجلس قرب النافذة وتقرأ الكتب التي تركها والدها. أما سامر، فكان يزورها كل يوم خميس.</p>
+<p>وفي مساء شتوي، وصل إلى آدم ظرف بلا اسم. فتح الرسالة. كان الخط مألوفًا: خط نادر.</p>
+<p>«يا آدم، لقد قضينا أعمارنا نحاول فهم الآخرين، حتى نسينا أن الإنسان أكثر الأشياء غموضًا بالنسبة إلى نفسه. كنت أظن أن الصمت حكمة، ثم اكتشفت أنه قد يكون خوفًا يرتدي ثياب الحكمة. وكنت أظن أن الحقيقة سلاح، ثم عرفت أنها مرآة. لا أحد ينجو من رؤية نفسه كما هي، لكن بعضنا يتعلم أن يعيش بعدها».</p>
+<p>وتابع نادر: «أما أنا، فقد تعبت من الاختباء. ربما نلتقي يومًا، وربما لا. لكن إن حدث ذلك، فلا تسألني أين كنت. اسألني فقط: هل أصبحت تعرف متى يجب أن تتكلم؟».</p>
+<p>وضع آدم الرسالة على الطاولة. نظر إلى الساعة. كانت تشير إلى الثامنة تمامًا. ثم سمع طرقًا على الباب. ثلاث طرقات متباعدة.</p>
+<p>ابتسم، ونهض وفتح الباب. لكن لم يكن هناك أحد. فقط مظلة سوداء، وكتاب صغير، وورقة مطوية. فتح الورقة، فوجد جملة واحدة:</p>
+<div class="quote">«بعض الحكايات لا تنتهي حين نعرف الحقيقة، بل حين نتوقف عن الهرب منها».</div>
+<p>أغلق آدم الباب بهدوء. عاد إلى كرسيه، وجلس أمام النافذة، واستمع إلى المطر. ولأول مرة، لم يحاول تفسير صوته.</p><div class="chapter-end">نهاية الفصل العاشر</div></article>
+</div></div>
+</main>
+
+<section class="wrap" id="ending">
+<div class="end">
+<div class="ornament">❦</div>
+<h2 class="section-title">الخاتمة</h2>
+<blockquote>«لم يكن أصعب ما في الحياة أن نفقد من نحب، بل أن نكتشف أننا فقدنا أنفسنا ونحن نحاول الاحتفاظ بهم».</blockquote>
+<p>وما بين الحقيقة والندم، هناك مساحة صغيرة اسمها العمر. فلا تهدرها في انتظار اعتذار، ولا في مطاردة ماضٍ لا يستطيع العودة.</p>
+<p>تحدث حين يكون الكلام شجاعة، واصمت حين يكون الصمت رحمة.</p>
+<p style="color:var(--gold)">— ياسين خالد · الوزير كلاسڪ</p>
+</div>
+</section>
+<footer>© <span id="year"></span> جميع الحقوق محفوظة · <strong>ياسين خالد (الوزير كلاسڪ)</strong><br>آخر الذين فهموا الصمت</footer>
+<script>
+const progress=document.getElementById('progress');
+window.addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=(max>0?window.scrollY/max*100:0)+'%'});
+let fontSize=22;
+function changeFont(step){fontSize=Math.max(17,Math.min(30,fontSize+step*2));document.documentElement.style.setProperty('--reading',fontSize+'px')}
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
